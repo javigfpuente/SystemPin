@@ -105,8 +105,8 @@ public class Asistencia {
                 str  = new StringTokenizer(st," ");
                 aux = str.nextToken().trim();
                 int posicion=Integer.parseInt(aux);
-                
-               while (str.hasMoreTokens()) {
+                num_prof=buscar(posicion);
+                while (str.hasMoreTokens()) {
                    aux = str.nextToken().trim();
                    str2  = new StringTokenizer(aux,"-");
                    int datos[]=new int[5];
@@ -139,10 +139,10 @@ public class Asistencia {
                             i++;
                         }
                         Calendar ca=null;
-                        if((num_prof>0)&&(Puntajes.get(num_prof).size()>0)){
+                        if((num_prof<Puntajes.size())&&(num_prof>0)&&(Puntajes.get(num_prof).size()>0)){
                             ca=Puntajes.get(num_prof).getCalLast();
                         }    
-                        if((num_prof=buscar(posicion))==-1){
+                        if(num_prof==-1){
                             Puntajes.add(0,new puntaje(posicion));
                             num_prof=0;
                         }    

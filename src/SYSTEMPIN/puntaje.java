@@ -55,8 +55,10 @@ public class puntaje {
     
     public String Comprobar(){
         String aux="";
-        if(puntajes.size()==1)
-            return "Solo tiene un puntaje registrado"+puntajes.get(0).get(Calendar.DATE);
+        if(puntajes.size()==1){
+            Calendar c=puntajes.get(0);
+            return "Solo tiene un puntaje registrado"+c.get(Calendar.DATE)+"/"+c.get(Calendar.MONTH)+"/"+c.get(Calendar.YEAR)+"  "+c.get(Calendar.HOUR)+":"+c.get(Calendar.MINUTE);
+        }    
         for(int i=0;i<this.size()-1;){
             if(Math.abs(puntajes.get(i).getTimeInMillis()-puntajes.get(i+1).getTimeInMillis())>25200000){
                 Calendar c=puntajes.get(i);

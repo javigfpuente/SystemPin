@@ -28,7 +28,7 @@ public class SystemPin {
      */
     public static void main (String []args)     {
         
-        Asistencia As=new Asistencia("c:/FP2-4196947909.txt","10/11/2014","15/11/2014");
+        Asistencia As=new Asistencia("c:/FP2-4196947909.txt","10/11/2014","17/11/2014");
         As.Comprobacion();
         /*Calendar c1 = GregorianCalendar.getInstance();
         System.out.println("Fecha actual: "+c1.getTime());
